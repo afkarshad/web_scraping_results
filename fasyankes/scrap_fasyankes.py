@@ -59,6 +59,12 @@ def assign_to_list(marker, prov):
         x = long.split('.')
         dec = ''.join(x[1:len(x)])
         long = float('.'.join([x[0], dec]))
+        
+    if (ltd == '?' and long != '?'):
+        ltd = 0
+        
+    if (ltd != '?' and long == '?'):
+        long = 0
     
     d1 = assign_pegawai(marker, "Dokter Spesialis : ", ',')
     d2 = assign_pegawai(marker, "Dokter Umum : ", ',')
